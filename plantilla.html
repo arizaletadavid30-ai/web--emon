@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plantilla — Ñemones Basquet Club</title>
+<meta name="description" content="Plantilla de Ñemones Basquet Club: fichas de los catorce jugadores, estadísticas y comparador.">
+<!-- ✨ NUEVO: tema (se aplica antes de pintar), icono y color de la barra del móvil -->
+<script src="js/tema.js"></script>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0d1b2a">
+<!-- ✨ NUEVO: Open Graph + Twitter Card → vista previa al compartir en WhatsApp, Telegram, redes… -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ñemones Basquet Club">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Plantilla — Ñemones Basquet Club">
+<meta property="og:description" content="Plantilla de Ñemones Basquet Club: fichas de los catorce jugadores, estadísticas y comparador.">
+<meta property="og:url" content="https://TU-DOMINIO.vercel.app/plantilla.html">
+<meta property="og:image" content="https://TU-DOMINIO.vercel.app/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Escudo y nombre de Ñemones Basquet Club sobre una pista de baloncesto">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Plantilla — Ñemones Basquet Club">
+<meta name="twitter:description" content="Plantilla de Ñemones Basquet Club: fichas de los catorce jugadores, estadísticas y comparador.">
+<meta name="twitter:image" content="https://TU-DOMINIO.vercel.app/assets/og-image.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <svg class="crest" viewBox="0 0 40 40" style="color:var(--accent)">
+        <circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M6 6c8 8 8 20 0 28M34 6c-8 8-8 20 0 28M1 20h38" stroke="currentColor" stroke-width="1" fill="none" opacity="0.55"/>
+        <text x="20" y="27" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="19" fill="currentColor">Ñ</text>
+      </svg>
+      ÑEMONES BC
+    </a>
+    <button class="navtoggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <ul class="navlinks">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="plantilla.html" aria-current="page">Plantilla</a></li>
+      <li><a href="calendario.html">Calendario</a></li>
+      <li><a href="club.html">Club</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="tienda.html">Tienda</a></li>
+      <li><a href="reservas.html">Reservas</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" style="padding-bottom:0">
+  <div class="wrap" style="grid-template-columns:1fr; padding-bottom:2.5rem">
+    <div>
+      <p class="kicker">Primera plantilla</p>
+      <h1>NUESTROS<br>JUGADORES</h1>
+      <p>Catorce fichas, un mismo objetivo: subirse al podio de la Liga Regional esta temporada.</p>
+      <div class="actions" style="display:flex;gap:0.8em;margin-top:1.4em;flex-wrap:wrap">
+        <a href="#comparador" class="btn solid">Comparar jugadores</a>
+        <a href="club.html#cuerpo-tecnico" class="btn ghost">Cuerpo técnico</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:2.5rem" id="quinteto-seccion">
+  <div class="wrap">
+    <div class="sectionhead">
+      <h2>Quinteto titular</h2>
+      <p style="margin:0">Los cinco jugadores que más minutos disputan por partido.</p>
+    </div>
+    <div class="roster" id="quinteto" style="grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));"></div>
+  </div>
+</section>
+
+<section class="alt" id="jugadores">
+  <div class="wrap">
+    <div class="sectionhead">
+      <h2>Toda la plantilla</h2>
+      <p id="roster-count" style="margin:0"></p>
+    </div>
+    <div class="toolbar">
+      <div class="chips" id="filtro-posicion" role="group" aria-label="Filtrar por posición"></div>
+      <div class="field" style="margin:0">
+        <label for="orden-plantilla">Ordenar por</label>
+        <select id="orden-plantilla"></select>
+      </div>
+    </div>
+    <div class="roster" id="roster"></div>
+  </div>
+</section>
+
+<section id="comparador">
+  <div class="wrap">
+    <div class="sectionhead"><h2>Comparador</h2></div>
+    <div class="comp-selects">
+      <div class="field"><label for="comp-a">Jugador A</label><select id="comp-a"></select></div>
+      <div class="field"><label for="comp-b">Jugador B</label><select id="comp-b"></select></div>
+    </div>
+    <div id="comp-resultado"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span data-year></span> Ñemones Basquet Club</span>
+    <span>Pabellón Ñemón · Sitio no oficial de demostración</span>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modal-jugador" role="dialog" aria-modal="true" aria-label="Estadísticas del jugador">
+  <div class="modal-box">
+    <button class="modal-close" id="modal-jugador-close" aria-label="Cerrar">✕</button>
+    <div id="modal-jugador-body"></div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/ilustraciones.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/quinteto.js"></script>
+<script src="js/plantilla.js"></script>
+</body>
+</html>
