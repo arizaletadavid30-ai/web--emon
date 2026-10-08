@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Producto — Ñemones Basquet Club</title>
+<meta name="description" content="Producto de la tienda oficial de Ñemones Basquet Club.">
+<!-- ✨ NUEVO: tema (se aplica antes de pintar), icono y color de la barra del móvil -->
+<script src="js/tema.js"></script>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0d1b2a">
+<!-- ✨ NUEVO: Open Graph + Twitter Card → vista previa al compartir en WhatsApp, Telegram, redes… -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ñemones Basquet Club">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Producto — Ñemones Basquet Club">
+<meta property="og:description" content="Producto de la tienda oficial de Ñemones Basquet Club.">
+<meta property="og:url" content="https://TU-DOMINIO.vercel.app/producto.html">
+<meta property="og:image" content="https://TU-DOMINIO.vercel.app/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Escudo y nombre de Ñemones Basquet Club sobre una pista de baloncesto">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Producto — Ñemones Basquet Club">
+<meta name="twitter:description" content="Producto de la tienda oficial de Ñemones Basquet Club.">
+<meta name="twitter:image" content="https://TU-DOMINIO.vercel.app/assets/og-image.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <svg class="crest" viewBox="0 0 40 40" style="color:var(--accent)">
+        <circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M6 6c8 8 8 20 0 28M34 6c-8 8-8 20 0 28M1 20h38" stroke="currentColor" stroke-width="1" fill="none" opacity="0.55"/>
+        <text x="20" y="27" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="19" fill="currentColor">Ñ</text>
+      </svg>
+      ÑEMONES BC
+    </a>
+    <button class="navtoggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <ul class="navlinks">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="plantilla.html">Plantilla</a></li>
+      <li><a href="calendario.html">Calendario</a></li>
+      <li><a href="club.html">Club</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="tienda.html" aria-current="page">Tienda</a></li>
+      <li><a href="reservas.html">Reservas</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section style="padding-top:2rem">
+  <div class="wrap" id="detalle-producto"></div>
+</section>
+
+<section class="alt" id="relacionados" style="padding:0"></section>
+
+<div class="cartbar">
+  <button id="cartopen" class="btn solid">Cesta (<span id="cartcount">0</span>)</button>
+</div>
+
+<div class="cartpanel" id="cartpanel">
+  <div class="cartbox">
+    <h3>Tu cesta <button id="cartclose" aria-label="Cerrar cesta" class="btn ghost" style="padding:0.3em 0.7em">✕</button></h3>
+    <div id="cartitems"></div>
+    <div class="carttotal"><span>Total</span><span id="carttotal">0.00 €</span></div>
+    <button id="checkout" class="btn solid">Finalizar pedido</button>
+    <!-- ✨ NUEVO: copia/comparte un enlace con el contenido de la cesta -->
+    <button id="cartshare" class="btn ghost">Compartir cesta</button>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>© <span data-year></span> Ñemones Basquet Club</span>
+    <span>Pabellón Ñemón · Sitio no oficial de demostración</span>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/ilustraciones.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/carrito.js"></script>
+<script src="js/producto.js"></script>
+</body>
+</html>

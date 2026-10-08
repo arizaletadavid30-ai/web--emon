@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Galería — Ñemones Basquet Club</title>
+<meta name="description" content="Galería de Ñemones Basquet Club: el pabellón, los partidos y la cantera en imágenes.">
+<!-- ✨ NUEVO: tema (se aplica antes de pintar), icono y color de la barra del móvil -->
+<script src="js/tema.js"></script>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0d1b2a">
+<!-- ✨ NUEVO: Open Graph + Twitter Card → vista previa al compartir en WhatsApp, Telegram, redes… -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ñemones Basquet Club">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Galería — Ñemones Basquet Club">
+<meta property="og:description" content="Galería de Ñemones Basquet Club: el pabellón, los partidos y la cantera en imágenes.">
+<meta property="og:url" content="https://TU-DOMINIO.vercel.app/galeria.html">
+<meta property="og:image" content="https://TU-DOMINIO.vercel.app/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Escudo y nombre de Ñemones Basquet Club sobre una pista de baloncesto">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Galería — Ñemones Basquet Club">
+<meta name="twitter:description" content="Galería de Ñemones Basquet Club: el pabellón, los partidos y la cantera en imágenes.">
+<meta name="twitter:image" content="https://TU-DOMINIO.vercel.app/assets/og-image.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <svg class="crest" viewBox="0 0 40 40" style="color:var(--accent)">
+        <circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M6 6c8 8 8 20 0 28M34 6c-8 8-8 20 0 28M1 20h38" stroke="currentColor" stroke-width="1" fill="none" opacity="0.55"/>
+        <text x="20" y="27" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="19" fill="currentColor">Ñ</text>
+      </svg>
+      ÑEMONES BC
+    </a>
+    <button class="navtoggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <ul class="navlinks">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="plantilla.html">Plantilla</a></li>
+      <li><a href="calendario.html">Calendario</a></li>
+      <li><a href="club.html">Club</a></li>
+      <li><a href="galeria.html" aria-current="page">Galería</a></li>
+      <li><a href="tienda.html">Tienda</a></li>
+      <li><a href="reservas.html">Reservas</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" style="padding-bottom:0">
+  <div class="wrap" style="grid-template-columns:1fr; padding-bottom:2.5rem">
+    <div>
+      <p class="kicker">Pabellón, partidos y cantera</p>
+      <h1>GALERÍA</h1>
+      <p>Imágenes del Pabellón Ñemón, los partidos y la cantera. De momento son ilustraciones; luego las cambias por fotos reales.</p>
+
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:2.5rem">
+  <div class="wrap">
+    <div class="chips" id="gal-filtros" role="group" aria-label="Filtrar por categoría"></div>
+    <div class="galgrid" id="galeria"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span data-year></span> Ñemones Basquet Club</span>
+    <span>Pabellón Ñemón · Sitio no oficial de demostración</span>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <div class="modal-box lightbox-box">
+    <button class="modal-close" id="lightbox-close" aria-label="Cerrar">✕</button>
+    <div id="lightbox-img"></div>
+    <div class="lightbox-info">
+      <div><h3 id="lightbox-titulo" style="margin:0"></h3><p id="lightbox-texto" style="margin:0.2rem 0 0"></p></div>
+      <div class="lightbox-nav">
+        <button class="btn ghost" id="lightbox-prev" aria-label="Anterior">←</button>
+        <button class="btn ghost" id="lightbox-next" aria-label="Siguiente">→</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/data.js"></script>
+<script src="js/ilustraciones.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/galeria.js"></script>
+</body>
+</html>
